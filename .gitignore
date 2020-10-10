@@ -2,3 +2,7 @@ data/
 results/
 *.DS_Store
 .ipynb_checkpoints/
+dask-worker-space/
+job_logs/
+grid_svr_dask_mpi.py
+submit_svr_mpi.sh
