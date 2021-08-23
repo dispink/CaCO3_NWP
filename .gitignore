@@ -9,3 +9,4 @@ submit_svr_mpi.sh
 models/
 __pycache__/
 COMMIT_EDITMSG
+.vscode/
