@@ -33,7 +33,7 @@ class PrepareData:
         will be in the same format. The negative measurement values are
         excluded.
         """
-        data_df = pd.read_csv(self.data_dir)
+        data_df = pd.read_csv(self.data_dir, index_col=0)
         xl_df = pd.read_excel(self.select_dir, sheet_name='CHOSEN')
         mask = ((data_df.core.isin(xl_df.Station)) & 
                 (~data_df[self.measurement].isna()) &
@@ -48,7 +48,7 @@ class PrepareData:
         y (weight percent, the 0 values are replaced by 0.01). The 
         ouputs are in np.ndarray
         """
-        X = data_df.iloc[:, 1: -5].values
+        X = data_df.iloc[:, :-5].values
         X = X / X.sum(axis = 1, keepdims = True)
         y = data_df[self.measurement].replace(0, 0.01).values
 
