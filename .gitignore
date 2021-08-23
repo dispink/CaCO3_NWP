@@ -8,3 +8,4 @@ grid_svr_dask_mpi.py
 submit_svr_mpi.sh
 models/
 __pycache__/
+COMMIT_EDITMSG
