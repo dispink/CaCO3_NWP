@@ -10,7 +10,7 @@ class PrepareData:
     """
 
     def __init__(self, measurement,
-                 data_dir='~/CaCO3_NWP/data/spe+bulk_dataset_20210818.csv', 
+                 data_dir='~/CaCO3_NWP/data/spe+bulk_dataset_20210825.csv', 
                  select_dir='~/CaCO3_NWP/data/ML station list.xlsx',
                  channel_amount=2048):
         while True:
@@ -36,6 +36,20 @@ class PrepareData:
         data_df = pd.read_csv(self.data_dir, index_col=0)
         xl_df = pd.read_excel(self.select_dir, sheet_name='CHOSEN')
         mask = ((data_df.core.isin(xl_df.Station)) & 
+                (~data_df[self.measurement].isna()) &
+                (data_df[self.measurement] >= 0))
+        return data_df.loc[mask, :]
+
+    def select_casestudy(self, case_cores = ['SO202-37-2_re', 'PS75-056-1']):
+        """
+        This function is to select the two cores for case study and 
+        having the measurement (CaCO3, TC, TOC) from a pd.DataFrame 
+        (data_dir). This dataset has composite_id, channels, TC%, TOC%,
+        CaCO3%, core, mid_depth_mm and the output will be in the same 
+        format. The negative measurement values are excluded.
+        """
+        data_df = pd.read_csv(self.data_dir, index_col=0)
+        mask = ((data_df.core.isin(case_cores)) & 
                 (~data_df[self.measurement].isna()) &
                 (data_df[self.measurement] >= 0))
         return data_df.loc[mask, :]
