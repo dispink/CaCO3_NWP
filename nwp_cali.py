@@ -10,7 +10,7 @@ class PrepareData:
     """
 
     def __init__(self, measurement,
-                 data_dir='~/CaCO3_NWP/data/spe+bulk_dataset_20210825.csv', 
+                 data_dir='~/CaCO3_NWP/data/spe+bulk_dataset_20220629.csv', 
                  select_dir='~/CaCO3_NWP/data/ML station list.xlsx',
                  channel_amount=2048):
         while True:
