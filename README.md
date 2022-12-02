@@ -3,6 +3,7 @@ It is a cooperative project with JC aiming to build models for predicting CaCO<s
 The model is training by the bulk measurements (low resolution: several centimeters to meters) and the spectra (high resolution: 1 cm) provided by JC. These data are measured from the sediment cores taken at spreading over the high latitude Northwest Pacific (37°N-52°N) and Pacific sector of the Southern Ocean (53°S-63°S), with a water depth coverage from 1211 m to 4853 m deep. 
 
 ## Publication
+[Full-text access](https://rdcu.be/c0SEK) <br>
 Lee, AS., Chao, WS., Liou, S.Y.H. et al. Quantifying calcium carbonate and organic carbon content in marine sediments from XRF-scanning spectra with a machine learning approach. Sci Rep 12, 20860 (2022). https://doi.org/10.1038/s41598-022-25377-x
 
 ## Workflow
