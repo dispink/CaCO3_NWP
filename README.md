@@ -2,6 +2,9 @@
 It is a cooperative project with JC aiming to build models for predicting CaCO<sub>3</sub>, TOC, and TC using spectra produced by Avaatech.
 The model is training by the bulk measurements (low resolution: several centimeters to meters) and the spectra (high resolution: 1 cm) provided by JC. These data are measured from the sediment cores taken at spreading over the high latitude Northwest Pacific (37°N-52°N) and Pacific sector of the Southern Ocean (53°S-63°S), with a water depth coverage from 1211 m to 4853 m deep. 
 
+## Publication
+Lee, AS., Chao, WS., Liou, S.Y.H. et al. Quantifying calcium carbonate and organic carbon content in marine sediments from XRF-scanning spectra with a machine learning approach. Sci Rep 12, 20860 (2022). https://doi.org/10.1038/s41598-022-25377-x
+
 ## Workflow
 ### Pilot test
 `pilot_test.ipynb` `grid_pilot_ridge.py`, `grid_pilot_svr.py` and `submit_pilot.sh` give the fundation of how to prepare data and what combination of machine learning (ML) algorithms (Principal componemt analysis, Non-negative matrix factorization, Ridged regression, Support vector regression, Randomforest) will we use. The core SO264-15-2 is taken as the trial data. The promising outcome let us decide to dive into this project.
@@ -42,3 +45,6 @@ Add two more cores from the Northwest Pacific (SO264-69-2 and LV28-44-3) with th
 
 P.S. Detail output files please check ths log in Git.<br>
 P.S. "dev set" and "test set" stand for the same meaning of data subsets in the workflow. I was planning to have different data subsets for them, but at the end I don't think it's necessary.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change. If you're a newby student want to work on large geochemical dataset, you might find something interesting in this project. Any application or modification based on this repository, please kindly cite the direct publication mentioned above.
